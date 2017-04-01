@@ -1,0 +1,97 @@
+/* Блок с линияи околок картинок ведущие к заголовкам. Отдельный шаблон square*/
+
+.photobank .square-top {
+	margin-bottom: 30px; 
+	border-top: 1px solid #ff9800; 
+	margin-right: -30px;
+}
+.photobank .line {
+	margin:0 auto;
+    width: 70px;
+    height: 3px;
+    background: #ff9800;
+    margin-bottom:10px;
+}
+.photobank .square-top::before {
+	content:'';
+	position: absolute;
+	margin-top:-5px;
+	margin-left:-5px;
+	width:10px;
+	height:10px;
+	border-radius: 10px;
+	background-color: rgb(255, 152, 0);
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.photobank .square-bot {
+	border-left: 1px solid #ff9800;
+	height:55px;
+	margin-bottom:-40px;
+	margin-left:0px;
+}
+.photobank .square-head {
+	margin-left:20px
+}
+.photobank .square-bot::after {
+	content:'';
+	position: absolute;
+	margin-top:50px;
+	margin-left:-5px;
+	width:10px;
+	height:10px;
+	border-radius: 10px;
+	background-color: rgb(255, 152, 0);
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.photobank .square-even .square-bot {
+	border-top: 1px solid #ff9800;
+	margin-right: -30px;
+	
+}
+.photobank .square-even .square-bot::before {
+	content:'';
+	float:right;
+	margin-top:-5px;
+	margin-right:-5px;
+	width:10px;
+	height:10px;
+	border-radius: 10px;
+	background-color: rgb(255, 152, 0);
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+	
+}
+.photobank .square-even .square-top {
+	border:none;
+}
+.photobank .square-even .square-top::before {
+	display:none;
+}
+@media (max-width: 768px) {
+	.photobank .square-bot {
+		border-top: 1px solid #ff9800;
+		height:30px;
+		margin-right:0;
+	}
+	.photobank .square-bot::before {
+		content:'';
+		float:right;
+		margin-top:-5px;
+		margin-right:-5px;
+		width:10px;
+		height:10px;
+		border-radius: 10px;
+		background-color: rgb(255, 152, 0);
+		box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+		
+	}
+	.photobank .square-even .square-bot {
+		margin-right:0;	
+	}
+	
+	.photobank .square-bot::after {
+		margin-top:30px;
+	}
+	.photobank .square-top {
+		display:none;
+	}
+}

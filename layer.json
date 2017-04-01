@@ -1,0 +1,10 @@
+{
+	"tpl":"-photobank/layout.tpl",
+	"tplroot":"GALLERY",
+	"jsontpl":"-photobank/?src=~{crumb.name}/",
+	"child":{
+		"tpl":"-photobank/layout.tpl",
+		"tplroot":"ONEGALLERY",
+		"jsontpl":"-photobank/?src=~{crumb.parent.name}/&name={crumb.name}"
+	}
+}
