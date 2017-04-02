@@ -37,7 +37,7 @@ if ($name) {
 		}
 
 		if (!$gal) $gal = array();	
-		if (!isset($gal['title'])) $gal['title'] = "Фотогалерея";
+		//if (!isset($gal['title'])) $gal['title'] = "Фотогалерея";
 
 		
 		
@@ -65,7 +65,7 @@ if ($name) {
 		return $gal;
 	}, array($src));
 		
-	if (empty($gal['title'])) $gal['title'] = "Фотобанк";
+	if (empty($gal['title'])) $gal['title'] = "";
 	if (empty($gal['lable'])) $gal['lable'] = "";
 
 	if (empty($gal['content'])) $gal['content'] = "";

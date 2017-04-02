@@ -116,23 +116,23 @@
 	</div>
 	<p>{data.content}</p>
 	<div class="space text-right" style="clear:both">
-		<a href="/">На главную</a>
+		<a href="/{crumb.parent}">Назад</a>
 	</div>
 	{gal:}
 	<div class="col-lg-3 col-md-3 col-sm-6 text-center space">
 		<div style="margin-bottom:10px;" class="panel panel-default">
-			<div class="panel-body">{title}
+			<div class="panel-body">{title|name}
 				<span class="badge">{count}</span>
 			</div>
 		</div>
 		
 		<a class="thumbnail" style="margin-bottom:5px;" 
-			href="/{...gallery}/{name}" title="{title}">
+			href="/{crumb.parent}/{...gallery}/{name}" title="{title}">
 			<img class="img-responsive" src="/-imager/?src={data.dir}{folder}/&w=300&h=150&crop=1" alt="{title}">
 		</a>
 	</div>
 {showtitle:}
-		<h1>{title|data.title}</h1>
+		<h1>{((title|data.title)|name)|:Фотобанк}</h1>
 		{(lable|data.lable):%block}
 	{%block:}<blockquote>{.}</blockquote>
 {ONEGALLERY:}
@@ -153,7 +153,7 @@
 			{data.list::img}
 		</div>
 		<div class="space text-right" style="clear:both">
-			<a href="/{data.gdata.gallery}">{data.gdata.button|:Галереи}</a>
+			<a href="/{crumb.parent}">{data.gdata.button|:Галереи}</a>
 		</div>
 		
 		<script>
