@@ -127,7 +127,7 @@
 		</div>
 		
 		<a class="thumbnail" style="margin-bottom:5px;" 
-			href="/{crumb.parent}/{...gallery}/{name}" title="{title}">
+			href="/{crumb}/{name}" title="{title}">
 			<img class="img-responsive" src="/-imager/?src={data.dir}{folder}/&w=300&h=150&crop=1" alt="{title}">
 		</a>
 	</div>
